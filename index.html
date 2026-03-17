@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Резюме - Семенов Алексей Витальевич</title>
+
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/blocks/_resume.css" />
+    <link rel="stylesheet" href="assets/css/blocks/_section.css" />
+    <link rel="stylesheet" href="assets/css/blocks/_contacts.css" />
+    <link rel="stylesheet" href="assets/css/blocks/_skills.css" />
+    <link rel="stylesheet" href="assets/css/blocks/_experience.css" />
+    <link rel="stylesheet" href="assets/css/blocks/_education.css" />
+    <link rel="stylesheet" href="assets/css/blocks/_languages.css" />
+    <link rel="stylesheet" href="assets/css/blocks/_lang-switcher.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css"
+    />
+  </head>
+  <body>
+    <div class="resume">
+      <aside class="resume__sidebar">
+        <div class="lang-switcher">
+          <button class="lang-switcher__btn" data-lang="ru">RU</button>
+          <button class="lang-switcher__btn" data-lang="en">EN</button>
+        </div>
+
+        <a href="assets/image/photo_hh.png" class="glightbox">
+          <img
+            src="assets/image/photo_hh.png"
+            alt="Семенов Алексей Витальевич"
+            class="resume__photo"
+          />
+        </a>
+
+        <h1 class="resume__name" data-i18n="name">
+          Семенов Алексей Витальевич
+        </h1>
+        <div class="resume__position" data-i18n="position">
+          Fullstack-разработчик
+        </div>
+
+        <section class="section section--sidebar">
+          <h2
+            class="section__title section__title--sidebar"
+            data-i18n="contacts_title"
+          >
+            Контакты
+          </h2>
+          <ul class="contacts__list">
+            <li class="contacts__item">
+              <span class="contacts__label" data-i18n="residence_label"
+                >Проживание</span
+              >
+              <span class="contacts__value" data-i18n="location"
+                >Великий Новгород</span
+              >
+            </li>
+            <li class="contacts__item">
+              <span class="contacts__label" data-i18n="phone_label"
+                >Телефон</span
+              >
+              <span class="contacts__value"
+                ><a href="tel:+79992848470">+7 (999) 284-84-70</a></span
+              >
+            </li>
+            <li class="contacts__item">
+              <span class="contacts__label" data-i18n="email_label">Email</span>
+              <span class="contacts__value"
+                ><a href="mailto:midhey@yandex.ru">midhey@yandex.ru</a></span
+              >
+            </li>
+            <li class="contacts__item">
+              <span class="contacts__label" data-i18n="telegram_label"
+                >Telegram</span
+              >
+              <span class="contacts__value"
+                ><a href="https://t.me/midhey" target="_blank">@midhey</a></span
+              >
+            </li>
+            <li class="contacts__item">
+              <span class="contacts__label">GitHub</span>
+              <span class="contacts__value"
+                ><a
+                  href="https://github.com/midhey"
+                  target="_blank"
+                  data-i18n="github_label"
+                  >midhey</a
+                ></span
+              >
+            </li>
+          </ul>
+        </section>
+
+        <section class="section section--sidebar">
+          <h2
+            class="section__title section__title--sidebar"
+            data-i18n="skills_title"
+          >
+            Ключевые навыки
+          </h2>
+
+          <div class="skills-group">
+            <div class="skills-group__title">Frontend</div>
+            <div class="skills">
+              <span class="skills__item">JavaScript</span>
+              <span class="skills__item">TypeScript</span>
+              <span class="skills__item">Vue.js</span>
+              <span class="skills__item">Nuxt.js</span>
+              <span class="skills__item">React</span>
+              <span class="skills__item">Next.js</span>
+            </div>
+          </div>
+
+          <div class="skills-group">
+            <div class="skills-group__title">Backend</div>
+            <div class="skills">
+              <span class="skills__item">Node.js</span>
+              <span class="skills__item">PHP</span>
+              <span class="skills__item">Laravel</span>
+              <span class="skills__item">REST API</span>
+            </div>
+          </div>
+
+          <div class="skills-group">
+            <div class="skills-group__title">Инфраструктура</div>
+            <div class="skills">
+              <span class="skills__item">Docker</span>
+              <span class="skills__item">Git</span>
+              <span class="skills__item">CI/CD</span>
+              <span class="skills__item">Linux</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="section section--sidebar">
+          <h2
+            class="section__title section__title--sidebar"
+            data-i18n="languages_title"
+          >
+            Языки
+          </h2>
+          <ul class="languages__list">
+            <li class="languages__item">
+              <span class="languages__name" data-i18n="lang_ru">Русский</span>
+              <span class="languages__level" data-i18n="lang_ru_level"
+                >Родной</span
+              >
+            </li>
+            <li class="languages__item">
+              <span class="languages__name" data-i18n="lang_en"
+                >Английский</span
+              >
+              <span class="languages__level" data-i18n="lang_en_level"
+                >B1 (Средний)</span
+              >
+            </li>
+          </ul>
+        </section>
+      </aside>
+
+      <main class="resume__main">
+        <section class="section">
+          <h2 class="section__title" data-i18n="about_title">Обо мне</h2>
+          <div class="experience__description">
+            <p data-i18n="about_text">
+              Fullstack-разработчик с опытом более 3.5 лет в разработке
+              масштабируемых веб-приложений, Telegram Mini Apps,
+              backend-сервисов и интеграций с внешними API. Основной стек —
+              <b>JavaScript/TypeScript</b> (Vue, React, Node.js) и
+              <b>PHP</b> (Laravel).
+            </p>
+          </div>
+        </section>
+
+        <section class="section">
+          <h2 class="section__title" data-i18n="experience_title">
+            Опыт работы
+          </h2>
+          <div class="experience">
+            <div class="experience__item">
+              <div class="experience__header">
+                <div class="experience__company" data-i18n="exp_project">
+                  Проектная работа
+                </div>
+                <div class="experience__date">
+                  12.2025 — <span data-i18n="exp_current">н.в.</span>
+                </div>
+              </div>
+              <div class="experience__position" data-i18n="position">
+                Fullstack-разработчик
+              </div>
+              <div class="experience__description">
+                <ul class="experience__list" data-i18n="exp_project_list">
+                  <!-- Заполняется динамически из i18n.js -->
+                </ul>
+              </div>
+            </div>
+
+            <div class="experience__item">
+              <div class="experience__header">
+                <div class="experience__company" data-i18n="exp_digital">
+                  Digital Pulse
+                </div>
+                <div class="experience__date">11.2024 — 11.2025</div>
+              </div>
+              <div class="experience__position" data-i18n="position">
+                Fullstack-разработчик
+              </div>
+              <div class="experience__description">
+                <ul class="experience__list" data-i18n="exp_digital_list">
+                  <!-- Заполняется динамически из i18n.js -->
+                </ul>
+              </div>
+            </div>
+
+            <div class="experience__item">
+              <div class="experience__header">
+                <div class="experience__company" data-i18n="exp_kurat">
+                  Куратов
+                </div>
+                <div class="experience__date">02.2024 — 11.2024</div>
+              </div>
+              <div class="experience__position">Web Developer</div>
+              <div class="experience__description">
+                <ul class="experience__list" data-i18n="exp_kurat_list">
+                  <!-- Заполняется динамически из i18n.js -->
+                </ul>
+              </div>
+            </div>
+
+            <div class="experience__item">
+              <div class="experience__header">
+                <div class="experience__company" data-i18n="exp_new_intel">
+                  Новый Интеллект
+                </div>
+                <div class="experience__date">11.2022 — 02.2024</div>
+              </div>
+              <div class="experience__position" data-i18n="position">
+                Fullstack-разработчик
+              </div>
+              <div class="experience__description">
+                <ul class="experience__list" data-i18n="exp_new_intel_list">
+                  <!-- Заполняется динамически из i18n.js -->
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section">
+          <h2 class="section__title" data-i18n="education_title">
+            Образование
+          </h2>
+          <div class="education">
+            <div class="education__item">
+              <div class="education__degree" data-i18n="edu_bach">
+                Бакалавр (Информатика и вычислительная техника)
+              </div>
+              <div class="education__university">
+                Новгородский государственный университет им. Я. Мудрого
+              </div>
+              <div class="education__meta">2026</div>
+            </div>
+            <div class="education__item">
+              <div class="education__degree" data-i18n="edu_college">
+                Среднее специальное (Компьютерные системы и комплексы)
+              </div>
+              <div class="education__university">
+                Политехнический колледж НовГУ
+              </div>
+              <div class="education__meta">2020</div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
+    <script src="assets/js/i18n.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
+
