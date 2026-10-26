@@ -4,9 +4,10 @@ const translations = {
         position: "Fullstack-разработчик",
         contacts_title: "Контакты",
         skills_title: "Ключевые навыки",
+        skills_infra: "Инфраструктура",
         languages_title: "Языки",
         about_title: "Обо мне",
-        about_text: `Fullstack-разработчик с опытом более 3.5 лет в разработке масштабируемых веб-приложений, Telegram Mini Apps, backend-сервисов и интеграций с внешними API. Основной стек — <b>JavaScript/TypeScript</b> (Vue, React, Node.js) и <b>PHP</b> (Laravel).`,
+        about_text: `Fullstack-разработчик с опытом более 3.5 лет в разработке масштабируемых веб-приложений, Telegram Mini Apps, backend-сервисов и интеграций с внешними API. Основной стек — <b>JavaScript/TypeScript</b> (Vue, React, Node.js) и <b>PHP</b> (Laravel). Отдельное направление — CI/CD и релизные конвейеры для корпоративных систем, а также инструменты на базе AI-агентов (MCP, Claude Code).`,
         experience_title: "Опыт работы",
         education_title: "Образование",
         location: "Великий Новгород",
@@ -23,12 +24,21 @@ const translations = {
         exp_current: "н.в.",
         
         // Experience Titles
+        exp_itoffice: "ООО «АйТиОфис»",
         exp_project: "Проектная работа",
         exp_digital: "Digital Pulse",
         exp_kurat: "Куратов",
         exp_new_intel: "Новый Интеллект",
 
         // Experience Lists (Full from PDF)
+        exp_itoffice_list: `
+            <li>Перевёл веб-контур корпоративной ERP с монорепозитория и единого WAR на пер-модульную схему: 43 модуля в отдельных репозиториях GitLab, у каждого свой CI и артефакт; миграцию 43/43 репозиториев провёл за один день без простоя системы.</li>
+            <li>Спроектировал и вывел в прод три идемпотентные машины полного цикла релиза модуля (размещение → публикация → активация) на Ant, PL/SQL и PowerShell: размещение нового модуля — 10 секунд, повторный прогон — 2 секунды, без правок клиента и изменения регламента администраторов.</li>
+            <li>Перевёл сборку двух Java/GWT-продуктов с боевых серверов в Docker-раннер с воспроизводимым тулчейном и добавил стадию проверки готовности приложения по HTTP: простой сервиса при деплое сократился с десятков минут до времени rsync, CI-код двух проектов вынес в общий репозиторий (−66 % кода в проектах).</li>
+            <li>Построил конвейер миграции legacy-клиента (Delphi, Java Swing) на React на базе AI-агентов: формализованные скиллы, очередь работ и обязательное независимое ревью — 12 компонентов и 36 функций за 6 недель; ревью поймало 24 дефекта до выхода в прод, включая порчу данных и завышенные итоги в отчётности.</li>
+            <li>Разработал MCP-сервер на Node.js — каталог внутренней UI-библиотеки на 347 элементов, генерируемый из AST и JSDoc: поиск с собственным стеммером русского языка без зависимостей, транспорты stdio и StreamableHTTP, hot-reload каталога, доставка через Docker и systemd.</li>
+            <li>Реализовал в Java-клиенте ERP синхронизацию рабочей копии по схеме ensure/converge: шесть ручных операций свёрнуты в одну кнопку с окном прогресса и протоколом, локальные изменения разработчика не теряются, 30 сценариев проверены на стендах.</li>
+        `,
         exp_project_list: `
             <li>Поддерживал и дорабатывал веб-проекты под задачи заказчика: вносил изменения в интерфейсы, функциональность и интеграции.</li>
             <li>Разработал с нуля Telegram Mini App для e-commerce с интернет-магазином внутри Telegram и кастомной админкой на Laravel Filament.</li>
@@ -69,9 +79,10 @@ const translations = {
         position: "Fullstack Developer",
         contacts_title: "Contacts",
         skills_title: "Key Skills",
+        skills_infra: "Infrastructure",
         languages_title: "Languages",
         about_title: "About Me",
-        about_text: `Fullstack Developer with over 3.5 years of experience in developing scalable web applications, Telegram Mini Apps, backend services, and external API integrations. Main stack: <b>JavaScript/TypeScript</b> (Vue, React, Node.js) and <b>PHP</b> (Laravel).`,
+        about_text: `Fullstack Developer with over 3.5 years of experience in developing scalable web applications, Telegram Mini Apps, backend services, and external API integrations. Main stack: <b>JavaScript/TypeScript</b> (Vue, React, Node.js) and <b>PHP</b> (Laravel). A separate track is CI/CD and release pipelines for enterprise systems, plus tooling built on AI agents (MCP, Claude Code).`,
         experience_title: "Work Experience",
         education_title: "Education",
         location: "Veliky Novgorod",
@@ -87,11 +98,20 @@ const translations = {
         lang_en_level: "B1 (Intermediate)",
         exp_current: "present",
 
+        exp_itoffice: "ITOffice",
         exp_project: "Freelance / Project Work",
         exp_digital: "Digital Pulse",
         exp_kurat: "Kuratov",
         exp_new_intel: "New Intelligence",
 
+        exp_itoffice_list: `
+            <li>Migrated the web tier of a corporate ERP from a monorepo and a single WAR to a per-module scheme: 43 modules in separate GitLab repositories, each with its own CI and artifact; completed the 43/43 repository migration in one day with zero downtime.</li>
+            <li>Designed and shipped to production three idempotent release machines covering the full module lifecycle (allocate to publish to activate) in Ant, PL/SQL, and PowerShell: 10 seconds to onboard a new module, 2 seconds for a converged re-run, with no client changes and no change to admin procedures.</li>
+            <li>Moved the builds of two Java/GWT products off production servers into a Docker runner with a reproducible toolchain and added an HTTP application-readiness stage: deploy downtime dropped from tens of minutes to the duration of an rsync, and CI code for both projects was extracted into a shared repository (-66% in-project code).</li>
+            <li>Built an AI-agent-driven pipeline for migrating a legacy client (Delphi, Java Swing) to React: formalized skills, a work queue, and a mandatory independent review step - 12 components and 36 functions in 6 weeks; the review caught 24 defects before production, including data corruption and inflated report totals.</li>
+            <li>Developed a Node.js MCP server - a 347-item catalog of an internal UI library generated from AST and JSDoc: search with a custom zero-dependency Russian stemmer, stdio and StreamableHTTP transports, catalog hot reload, and Docker/systemd delivery.</li>
+            <li>Implemented working-copy synchronization in the ERP Java client using an ensure/converge design: six manual steps collapsed into a single button with a progress window and log, local developer changes are never lost, and 30 scenarios were verified on staging.</li>
+        `,
         exp_project_list: `
             <li>Maintained and improved web projects based on client requirements: UI changes, functionality updates, and integrations.</li>
             <li>Developed a Telegram Mini App for e-commerce from scratch with an in-app store and custom Laravel Filament admin panel.</li>
