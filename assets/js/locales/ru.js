@@ -22,6 +22,8 @@ export const ru = {
     lang_en: "Английский",
     lang_en_level: "B1 (Средний)",
     exp_current: "н.в.",
+    theme_toggle: "Переключить тему",
+    pdf_download: "Скачать PDF",
 
     // Названия мест работы
     exp_itoffice: "ООО «АйТиОфис»",

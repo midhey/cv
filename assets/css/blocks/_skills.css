@@ -29,4 +29,11 @@
     font-size: 13px;
     font-weight: 500;
     color: var(--color-primary);
+    transition: transform 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.skills__item:hover {
+    transform: translateY(-1px);
+    border-color: var(--color-primary);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
 }

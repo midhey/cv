@@ -1,8 +1,6 @@
 .lang-switcher {
     display: flex;
     gap: 8px;
-    margin-bottom: var(--spacing-lg);
-    justify-content: flex-start;
 }
 
 .lang-switcher__btn {

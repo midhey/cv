@@ -12,7 +12,13 @@
     top: 10px;
     bottom: 0;
     width: 2px;
-    background-color: var(--color-border);
+    background: linear-gradient(
+        to bottom,
+        var(--color-primary) 0,
+        var(--color-border) 120px,
+        var(--color-border) 85%,
+        transparent 100%
+    );
 }
 
 .experience__item {
@@ -23,14 +29,16 @@
 .experience__item::before {
     content: '';
     position: absolute;
-    left: -22px;
-    top: 8px;
-    width: 10px;
-    height: 10px;
+    left: -23px;
+    top: 7px;
+    width: 12px;
+    height: 12px;
     border-radius: 50%;
     background-color: var(--color-primary);
     border: 2px solid var(--color-surface);
+    box-shadow: 0 0 0 3px var(--color-chip-bg);
     z-index: 1;
+    transition: background-color 0.25s ease, box-shadow 0.25s ease;
 }
 
 .experience__header {

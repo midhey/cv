@@ -1,0 +1,64 @@
+/* Панель действий в шапке сайдбара: язык, тема, PDF */
+.actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-lg);
+}
+
+.actions__group {
+    display: flex;
+    gap: var(--spacing-sm);
+}
+
+.action-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--color-text-muted);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.action-btn:hover {
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+}
+
+.action-btn__icon {
+    width: 15px;
+    height: 15px;
+    flex-shrink: 0;
+}
+
+/* Иконки темы: луна в светлой теме, солнце в тёмной */
+.action-btn__icon--sun,
+.action-btn__icon--moon {
+    display: none;
+}
+
+:root:not([data-theme='dark']) .action-btn__icon--moon {
+    display: block;
+}
+
+[data-theme='dark'] .action-btn__icon--sun {
+    display: block;
+}
+
+@media (pointer: coarse) {
+    .action-btn {
+        min-height: 44px;
+        min-width: 44px;
+        padding: 8px 12px;
+        font-size: 13px;
+    }
+}

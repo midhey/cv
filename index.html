@@ -4,6 +4,47 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Резюме - Семенов Алексей Витальевич</title>
+    <meta
+      name="description"
+      content="Резюме Fullstack-разработчика Алексея Семенова: JavaScript/TypeScript (Vue, React, Node.js), PHP (Laravel), CI/CD и инструменты на базе AI-агентов (MCP, Claude Code)."
+    />
+    <meta property="og:type" content="profile" />
+    <meta property="og:title" content="Семенов Алексей — Fullstack-разработчик" />
+    <meta
+      property="og:description"
+      content="Резюме: JavaScript/TypeScript (Vue, React, Node.js), PHP (Laravel), CI/CD и AI-агенты."
+    />
+    <meta
+      property="og:image"
+      content="https://midhey.github.io/cv/assets/image/photo_hh.png"
+    />
+    <meta
+      name="theme-color"
+      content="#f7fafc"
+      media="(prefers-color-scheme: light)"
+    />
+    <meta
+      name="theme-color"
+      content="#0b1120"
+      media="(prefers-color-scheme: dark)"
+    />
+    <link rel="icon" type="image/svg+xml" href="assets/image/favicon.svg" />
+
+    <script>
+      // Выставляем тему до отрисовки, чтобы не мигало (FOUC)
+      (function () {
+        var saved = null;
+        try {
+          saved = localStorage.getItem('resume_theme');
+        } catch (e) {}
+        var theme =
+          saved ||
+          (window.matchMedia('(prefers-color-scheme: dark)').matches
+            ? 'dark'
+            : 'light');
+        document.documentElement.dataset.theme = theme;
+      })();
+    </script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -20,9 +61,78 @@
   <body>
     <div class="resume">
       <aside class="resume__sidebar">
-        <div class="lang-switcher">
-          <button class="lang-switcher__btn" data-lang="ru">RU</button>
-          <button class="lang-switcher__btn" data-lang="en">EN</button>
+        <div class="actions">
+          <div class="lang-switcher">
+            <button class="lang-switcher__btn" data-lang="ru" type="button">
+              RU
+            </button>
+            <button class="lang-switcher__btn" data-lang="en" type="button">
+              EN
+            </button>
+          </div>
+          <div class="actions__group">
+            <button
+              class="action-btn theme-toggle"
+              type="button"
+              data-i18n-title="theme_toggle"
+              aria-label="Переключить тему"
+            >
+              <svg
+                class="action-btn__icon action-btn__icon--sun"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <circle cx="12" cy="12" r="5"></circle>
+                <line x1="12" y1="1" x2="12" y2="4"></line>
+                <line x1="12" y1="20" x2="12" y2="23"></line>
+                <line x1="4.22" y1="4.22" x2="6.34" y2="6.34"></line>
+                <line x1="17.66" y1="17.66" x2="19.78" y2="19.78"></line>
+                <line x1="1" y1="12" x2="4" y2="12"></line>
+                <line x1="20" y1="12" x2="23" y2="12"></line>
+                <line x1="4.22" y1="19.78" x2="6.34" y2="17.66"></line>
+                <line x1="17.66" y1="6.34" x2="19.78" y2="4.22"></line>
+              </svg>
+              <svg
+                class="action-btn__icon action-btn__icon--moon"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+              </svg>
+            </button>
+            <button
+              class="action-btn pdf-btn"
+              type="button"
+              data-i18n-title="pdf_download"
+              aria-label="Скачать PDF"
+            >
+              <svg
+                class="action-btn__icon"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7 10 12 15 17 10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+              </svg>
+              <span>PDF</span>
+            </button>
+          </div>
         </div>
 
         <a href="assets/image/photo_hh.png" class="glightbox">

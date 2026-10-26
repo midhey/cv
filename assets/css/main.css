@@ -14,6 +14,7 @@
 @import url('blocks/_education.css');
 @import url('blocks/_languages.css');
 @import url('blocks/_lang-switcher.css');
+@import url('blocks/_actions.css');
 
 /* Печать */
 @import url('print.css');

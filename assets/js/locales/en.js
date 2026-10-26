@@ -22,6 +22,8 @@ export const en = {
     lang_en: "English",
     lang_en_level: "B1 (Intermediate)",
     exp_current: "present",
+    theme_toggle: "Toggle theme",
+    pdf_download: "Download PDF",
 
     exp_itoffice: "ITOffice",
     exp_project: "Freelance / Project Work",

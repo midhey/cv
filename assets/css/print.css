@@ -1,6 +1,24 @@
 /* Все print-стили проекта собраны здесь */
 
 @media print {
+    /* Печать всегда в светлой палитре, независимо от выбранной темы */
+    :root,
+    [data-theme='dark'] {
+        color-scheme: light;
+        --color-text: #2d3748;
+        --color-text-muted: #718096;
+        --color-heading: #1a202c;
+        --color-primary: #3182ce;
+        --color-primary-dark: #2c5282;
+        --color-bg: #ffffff;
+        --color-surface: #ffffff;
+        --color-sidebar: #f8fafc;
+        --color-border: #edf2f7;
+        --color-chip-bg: #eff6ff;
+        --color-chip-border: #bfdbfe;
+        --color-date-bg: #f1f5f9;
+    }
+
     body {
         background-color: #fff;
         margin: 0;
@@ -62,7 +80,7 @@
         color: #000 !important;
     }
 
-    .lang-switcher {
+    .actions {
         display: none;
     }
 }

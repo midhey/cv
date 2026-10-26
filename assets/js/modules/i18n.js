@@ -22,6 +22,15 @@ export function setLanguage(lang) {
         }
     });
 
+    // Переводы для атрибутов (подсказки и aria-label кнопок)
+    document.querySelectorAll('[data-i18n-title]').forEach((el) => {
+        const value = translations[lang][el.dataset.i18nTitle];
+        if (value) {
+            el.title = value;
+            el.setAttribute('aria-label', value);
+        }
+    });
+
     document.documentElement.lang = lang;
 }
 
