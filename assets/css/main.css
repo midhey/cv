@@ -1,58 +1,19 @@
-:root {
-    --color-text: #2d3748;
-    --color-text-muted: #718096;
-    --color-primary: #3182ce;
-    --color-primary-dark: #2c5282;
-    --color-bg: #f7fafc;
-    --color-surface: #ffffff;
-    --color-border: #edf2f7;
-    --font-main: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    --spacing-xs: 4px;
-    --spacing-sm: 8px;
-    --spacing-md: 16px;
-    --spacing-lg: 24px;
-    --spacing-xl: 32px;
-}
+/* Точка входа: подключает все слои стилей */
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+/* База */
+@import url('base/_variables.css');
+@import url('base/_reset.css');
+@import url('base/_base.css');
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
+/* Блоки (БЭМ) */
+@import url('blocks/_resume.css');
+@import url('blocks/_section.css');
+@import url('blocks/_contacts.css');
+@import url('blocks/_skills.css');
+@import url('blocks/_experience.css');
+@import url('blocks/_education.css');
+@import url('blocks/_languages.css');
+@import url('blocks/_lang-switcher.css');
 
-body {
-    font-family: var(--font-main);
-    color: var(--color-text);
-    background-color: var(--color-bg);
-    line-height: 1.6;
-    font-size: 14px;
-    -webkit-font-smoothing: antialiased;
-}
-
-a {
-    color: var(--color-primary);
-    text-decoration: none;
-    transition: color 0.2s ease;
-}
-
-a:hover {
-    color: var(--color-primary-dark);
-    text-decoration: underline;
-}
-
-@media print {
-    body {
-        background-color: #fff;
-        margin: 0;
-        padding: 0;
-        -webkit-print-color-adjust: exact !important;
-        print-color-adjust: exact !important;
-    }
-
-    @page {
-        margin: 0;
-        size: A4 portrait;
-    }
-}
+/* Печать */
+@import url('print.css');

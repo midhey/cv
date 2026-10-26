@@ -28,9 +28,3 @@
     color: #fff;
     border-color: var(--color-primary);
 }
-
-@media print {
-    .lang-switcher {
-        display: none;
-    }
-}

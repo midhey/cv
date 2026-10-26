@@ -44,7 +44,7 @@
 .experience__company {
     font-size: 18px;
     font-weight: 700;
-    color: #1a202c;
+    color: var(--color-heading);
 }
 
 .experience__position {
@@ -58,7 +58,7 @@
     font-size: 13px;
     color: var(--color-text-muted);
     font-weight: 500;
-    background: #f1f5f9;
+    background: var(--color-date-bg);
     padding: 2px 8px;
     border-radius: 4px;
 }
@@ -83,10 +83,4 @@
 
 .experience__list li {
     margin-bottom: 6px;
-}
-
-@media print {
-    .experience__company, .experience__position {
-        color: #000 !important;
-    }
 }

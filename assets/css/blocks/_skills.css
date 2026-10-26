@@ -22,18 +22,11 @@
 }
 
 .skills__item {
-    background-color: #eff6ff;
-    border: 1px solid #bfdbfe;
+    background-color: var(--color-chip-bg);
+    border: 1px solid var(--color-chip-border);
     padding: 4px 10px;
     border-radius: 6px;
     font-size: 13px;
     font-weight: 500;
     color: var(--color-primary);
-}
-
-@media print {
-    .skills__item {
-        border-color: #cbd5e1 !important;
-        color: #0f172a !important;
-    }
 }
