@@ -22,3 +22,21 @@
     word-break: break-word;
     margin-top: 2px;
 }
+
+/* В одноколоночном режиме контакты укладываются сеткой, чтобы сайдбар не растягивался */
+@media (max-width: 920px) {
+    .contacts__list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+        gap: var(--spacing-sm) var(--spacing-md);
+    }
+
+    .contacts__item {
+        margin-bottom: 0;
+    }
+
+    .contacts__value a {
+        display: inline-block;
+        padding: 4px 0;
+    }
+}

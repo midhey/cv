@@ -42,7 +42,7 @@
 }
 
 .experience__company {
-    font-size: 18px;
+    font-size: clamp(16px, 4.5vw, 18px);
     font-weight: 700;
     color: var(--color-heading);
 }
@@ -83,4 +83,21 @@
 
 .experience__list li {
     margin-bottom: 6px;
+}
+
+/* Телефон: заголовок карточки в столбик, дата под названием */
+@media (max-width: 560px) {
+    .experience__header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--spacing-xs);
+    }
+
+    .experience__date {
+        align-self: flex-start;
+    }
+
+    .experience__list {
+        padding-left: 18px;
+    }
 }

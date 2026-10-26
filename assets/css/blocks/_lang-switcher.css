@@ -28,3 +28,13 @@
     color: #fff;
     border-color: var(--color-primary);
 }
+
+/* Тач-таргеты ≥44px на сенсорных устройствах */
+@media (pointer: coarse) {
+    .lang-switcher__btn {
+        min-height: 44px;
+        min-width: 48px;
+        padding: 8px 14px;
+        font-size: 13px;
+    }
+}

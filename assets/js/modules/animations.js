@@ -1,12 +1,47 @@
 // GSAP-анимации появления блоков
 export function initAnimations() {
+    // Пользователь просил меньше движения — не анимируем вовсе
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        return;
+    }
+
     gsap.registerPlugin(ScrollTrigger);
 
-    gsap.from('.resume__sidebar', {
-        duration: 1.2,
-        x: -50,
-        opacity: 0,
-        ease: 'power3.out'
+    const mm = gsap.matchMedia();
+
+    // Десктоп: колонки съезжаются с боков
+    mm.add('(min-width: 921px)', () => {
+        gsap.from('.resume__sidebar', {
+            duration: 1.2,
+            x: -50,
+            opacity: 0,
+            ease: 'power3.out'
+        });
+
+        gsap.from('.resume__main', {
+            duration: 1.2,
+            x: 50,
+            opacity: 0,
+            ease: 'power3.out'
+        });
+    });
+
+    // Мобильная колонка: только fade/сдвиг по Y, чтобы не было горизонтального скролла
+    mm.add('(max-width: 920px)', () => {
+        gsap.from('.resume__sidebar', {
+            duration: 0.9,
+            y: 24,
+            opacity: 0,
+            ease: 'power3.out'
+        });
+
+        gsap.from('.resume__main', {
+            duration: 0.9,
+            y: 24,
+            opacity: 0,
+            ease: 'power3.out',
+            delay: 0.15
+        });
     });
 
     gsap.from('.resume__photo', {
@@ -17,16 +52,7 @@ export function initAnimations() {
         delay: 0.3
     });
 
-    gsap.from('.resume__main', {
-        duration: 1.2,
-        x: 50,
-        opacity: 0,
-        ease: 'power3.out'
-    });
-
-    const experienceItems = gsap.utils.toArray('.experience__item');
-
-    experienceItems.forEach((item, i) => {
+    gsap.utils.toArray('.experience__item').forEach((item, i) => {
         gsap.from(item, {
             scrollTrigger: {
                 trigger: item,
